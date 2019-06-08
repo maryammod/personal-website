@@ -4,7 +4,6 @@
 import DefaultLayout from '~/layouts/Default.vue'
 
 // bootstrap js
-import 'bootstrap';
 
 // bootstrap css
 import "bootstrap/dist/css/bootstrap.css";

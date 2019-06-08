@@ -20,7 +20,7 @@
       <div class="logo-profile"><img src="https://via.placeholder.com/400x400.png" alt="profile-logo"></div>
     </section>
 
-    <section class="blog-post style-one pad-75">
+    <!-- <section class="blog-post style-one pad-75">
       <div class="container">
         <div class="row">
           <div class="col-md-10 offset-md-1">
@@ -61,31 +61,11 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
   </Layout>
 </template>
 
-<page-query>
-  query Home ($page: Int) {
-    allBlogPost (page: $page) {
-      edges {
-        node {
-          id
-          title
-          date (format: "D MMMM, YYYY")
-          day
-          month
-          description
-          path
-          image
-          author
-          category
-        }
-      }
-    }
-  }
-</page-query>
 
 <script>
 export default {

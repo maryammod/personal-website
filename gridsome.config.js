@@ -20,13 +20,25 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'posts/**/*.md',
+        path: 'content/posts/*.md',
         typeName: 'Post',
+        route: '/post/:slug',
+        refs: {
+          tags: 'Tag',
+        },
         remark: {
           plugins: [
-            // ...local plugins
+            '@gridsome/remark-prismjs'
           ]
         }
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'content/tags/*.md',
+        typeName: 'Tag',
+        route: '/tag/:id'
       }
     },
     {
@@ -36,5 +48,4 @@ module.exports = {
       }
     },
   ]
-  
 }

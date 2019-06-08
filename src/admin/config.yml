@@ -2,17 +2,28 @@ backend:
   name: github
   repo: maryammod/personal-website
 
-media_folder: "static/uploads"
-public_folder: "/uploads"
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+publish_mode: editorial_workflow
 
 collections:
   - name: "posts"
     label: "Posts"
-    folder: "posts"
+    folder: "content/posts"
     create: true
     slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Excerpt", name: "excerpt", widget: "string"}
+      - {label: "Description", name: "description", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "date"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Published", name: "published", widget: "boolean", default: false}
+      - {label: "Cover Image", name: "cover_image", widget: "image", default: false}
+      - {label: "Tags", name: "tags", widget: "relation", collection: "tags", searchFields: ["title"], valueField: "title", default: ""}
+      - {label: "Content", name: "content", widget: "markdown"}
+  - name: "tags"
+    label: "Tags"
+    folder: "content/tags"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}

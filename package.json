@@ -1,0 +1,25 @@
+{
+  "name": "mbafandkar",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "@gridsome/plugin-google-analytics": "^0.1.0",
+    "@gridsome/plugin-sitemap": "^0.2.1",
+    "@gridsome/remark-prismjs": "^0.0.6",
+    "@gridsome/source-filesystem": "^0.5.0",
+    "@gridsome/transformer-json": "^0.2.1",
+    "@gridsome/transformer-remark": "^0.3.2",
+    "bootstrap": "^4.3.1",
+    "gridsome": "^0.6.0",
+    "gridsome-plugin-netlify-cms": "^1.0.7",
+    "jquery": "^3.4.1",
+    "netlify-cms": "^2.9.1",
+    "owl.carousel": "^2.3.4",
+    "popper.js": "^1.15.0",
+    "vue-disqus": "^3.0.5"
+  }
+}

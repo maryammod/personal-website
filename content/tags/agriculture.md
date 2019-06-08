@@ -1,4 +1,0 @@
----
-name: Agriculture
-id: agriculture
----

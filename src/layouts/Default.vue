@@ -11,7 +11,7 @@
     <cabeTopHeader />
     <!-- top header --> 
 
-    <slot/>
+    <slot />
 
     <!-- footer wrapper -->
     <cabeFooter/>

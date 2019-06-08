@@ -9,10 +9,10 @@
 				<div class="col-lg-8 col-md-12">
 					<nav id="main-menu" class="text-center">
 						<ul>
-              <li><g-link class="nav__link" to="/">Home</g-link></li>
-              <li><g-link class="nav__link" to="/about">About</g-link></li>
-              <li><g-link class="nav__link" to="/contact">Contact</g-link></li>
-            </ul>
+							<li><g-link class="nav__link" to="/">Home</g-link></li>
+							<li><g-link class="nav__link" to="/about">About</g-link></li>
+							<li><g-link class="nav__link" to="/contact">Contact</g-link></li>
+						</ul>
 					</nav>
 				</div>
 				<div class="col-lg-2 col-md-4 text-right">

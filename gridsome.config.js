@@ -6,39 +6,36 @@
 
 module.exports = {
   siteName: 'Maryam Bafandkar',
+  siteDescription: 'Personal website of Maryam that contains thoughts, diary, ideas, etc.',
+
   transformers: {
+    //Add markdown support to all file-system sources
     remark: {
       externalLinksTarget: '_blank',
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
       anchorClassName: 'icon icon-link',
       plugins: [
-        // ...global plugins
+        '@gridsome/remark-prismjs'
       ]
     }
   },
+
   plugins: [
     {
+      // Create posts from markdown files
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'content/posts/*.md',
         typeName: 'Post',
-        route: '/post/:slug',
+        path: 'content/posts/*.md',
+        route: '/:slug',
         refs: {
-          tags: 'Tag',
-        },
-        remark: {
-          plugins: [
-            '@gridsome/remark-prismjs'
-          ]
+          // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
+          tags: {
+            typeName: 'Tag',
+            route: '/tag/:id',
+            create: true
+          }
         }
-      }
-    },
-    {
-      use: '@gridsome/source-filesystem',
-      options: {
-        path: 'content/tags/*.md',
-        typeName: 'Tag',
-        route: '/tag/:id'
       }
     },
     {

@@ -17,7 +17,7 @@ collections:
       - {label: "Publish Date", name: "date", widget: "date"}
       - {label: "Published", name: "published", widget: "boolean", default: false}
       - {label: "Cover Image", name: "cover_image", widget: "image", default: false}
-      - {label: "Tags", name: "tags", widget: "relation", collection: "tags", searchFields: ["title"], valueField: "title", default: ""}
+      - {label: "Tags", name: "tags", widget: "relation", collection: "tags", searchFields: ["title"], valueField: "title", multiple: true, default: ""}
       - {label: "Content", name: "content", widget: "markdown"}
   - name: "tags"
     label: "Tags"

@@ -3,7 +3,6 @@
         
         <PostMeta class="" :post="post" />
 
-        <br/>
         <g-link
             :to="post.path"
             class="entry-media"

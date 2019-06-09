@@ -1,7 +1,7 @@
 <template>
     <div class="entry-meta-content">
-        <div class="entry-date">{{post.date | getDay}}<span>{{post.date | getMonth}}</span></div>
-        <h2 class="entry-title"><router-link :to="post.path">{{post.title}}</router-link></h2>
+        <div class="my-date">{{post.date | formatDate}}</div>
+        <h2 class="entry-title"><span>{{postInitial}}</span><router-link :to="post.path">{{post.title}}</router-link></h2>
         <PostTags :post="post" />
     </div>
 </template>
@@ -22,7 +22,17 @@ export default {
             },
         },
     },
+    computed:{
+        postInitial(){
+            return this.post.title.toUpperCase().charAt(0)
+        }
+    },
     filters: {
+        formatDate: (value) =>{
+            if (value) {
+                return moment(String(value)).format('LL')
+            }
+        },
         getMonth: (value) => {
             if (value) {
                 return moment(String(value)).format('MMM')
@@ -38,5 +48,15 @@ export default {
 </script>
 
 <style>
-
+.my-date{
+    position: relative;
+    left: 70px;
+}
+.blog-post.style-three .entry-title{
+    margin-bottom: 10px;
+    display: block;
+}
+.blog-post.style-three .entry-meta-content {
+    margin-bottom: 20px;
+}
 </style>

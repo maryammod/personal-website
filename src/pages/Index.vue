@@ -3,10 +3,10 @@
 
     <Author/>
 
-    <section class="blog-post style-one pad-75">
+    <section class="blog-post style-three pad-100">
       <div class="container">
         <div class="row">
-          <div class="col-md-10 offset-md-1">
+          <div class="col-lg-6 offset-lg-3 offset-sm-1 col-sm-10">
             <PostCard v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node"/>
           </div>
         </div>
@@ -59,7 +59,7 @@ export default {
     Author
   },
   metaInfo: {
-    title: 'Hello, world!'
+    title: 'Home'
   }
 }
 </script>

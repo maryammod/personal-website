@@ -8,7 +8,8 @@ description: >-
   output. Lets look at some of the neural networks:
 date: 2019-06-19T15:26:22.666Z
 published: true
-cover_image: /images/uploads/network-of-happy-faces-seamless-pattern-background-f4bcan.jpg
+cover_image: >-
+  /images/uploads/blockseed_unveils_its_latest_ai-driven_platform_for_connecting_startups_to_investors_and_advisors.jpg
 tags:
   - Cover Image
   - New Onw

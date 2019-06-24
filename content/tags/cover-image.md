@@ -1,4 +1,4 @@
 ---
-title: Cover Image
-slug: cover-image
+title: Machine Learning
 ---
+

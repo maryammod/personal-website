@@ -1,5 +1,5 @@
 ---
-title: SLIC papers using for plant classification
+title: Hybrid approches using for plant classification
 description: >-
   There are the links of papers using hybrid machine learning approaches for
   plant classifiction.
@@ -14,7 +14,7 @@ content: >-
   There are the links of papers 
 
 
-  ## using SLIC and CNN for plant classisfication and leaves classification. 
+  ## using SLIC and CNN for plant classisfication and leaves classification.
 
 
   I must read it on the current week. 24Jun to 29Jun.
@@ -56,7 +56,5 @@ content: >-
   https://www.researchgate.net/publication/283862136_Hybrid_Deep_Learning_for_Plant_Leaves_Classification
 
   2. https://link.springer.com/chapter/10.1007/978-3-319-22186-1_11
-
-  3.
 ---
 

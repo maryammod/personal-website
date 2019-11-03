@@ -6,7 +6,7 @@ description: >-
   all types of ML
 date: 2019-11-03T05:02:41.531Z
 published: true
-cover_image: false
+cover_image: /images/uploads/tf2-maryam-bafandkar.png
 tags:
   - Machine Learning
 content: >-

@@ -5,7 +5,7 @@ description: >-
   building Docker image and publishing it on Docker hub.
 date: 2020-06-12T21:57:58.607Z
 published: true
-cover_image: false
+cover_image: /images/uploads/mudheero.png
 tags:
   - Plant Classification
 content: >-

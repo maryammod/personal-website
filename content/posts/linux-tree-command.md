@@ -1,8 +1,8 @@
 ---
 title: Linux tree command
 description: >-
-  Tree command? Machine Learning? Yes! you are asking the right question. At the
-  first glance, there is no relevant between Linux tree command and Machine
+  Tree command? Machine Learning? Yes! you are asking the right question. At
+  first glance, there is no connection between Linux tree command and Machine
   Learning stuff. But when you need to prepare your data to feed your network
   you must know about Linux command to download or upload the data from or to
   Linux server. Let's get into it.

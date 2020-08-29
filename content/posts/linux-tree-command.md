@@ -21,7 +21,7 @@ content: >-
   ```
 
 
-  # How do list contents of directories under Linux operating systems?
+  # How to show the list contents of directories under Linux operating systems?
 
 
   You need to use a linux command called "tree". It will list contents of

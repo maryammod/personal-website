@@ -66,10 +66,13 @@ content: >-
 
   * **\[user@]SRC_HOST:]file1**: it contains the address of the host files.
 
+  * **\[user@]DEST_HOST:]file2**: the location of the destination file or
+  directory should mention here.
 
-  Sometimes the address of host files are not as simple and clear as we expect
+
+  Sometimes the address of host files is not as simple and clear as we expect
   so, in this case, using "[tree"
-  command](https://maryambafandkar.me/linux-tree-command) can be so helpful to
+  command](https://maryambafandkar.me/linux-tree-command) can be SO helpful to
   find the location of data you need to work on it for your project.
 
 
@@ -82,46 +85,37 @@ content: >-
   "near-atomic" transfer using temporary files.
 
 
-  In this tutorial, we will show you how to use the scp command through
-  practical examples and detailed explanations of the most common scp options
-
-   )check the address of files on the mabda, To brows file (link) “tree” command is a great option.
-
-  2)After finding the location of files, we can use scp command to copy files
-  from our mabda to maghsad.
+  ## **SCP Options**
 
 
-  Lets get more into this step.
-
-
-
-
-  Here is the way we can use SCP commanad,
-
-
-  SCP mabda maghsad
-
-
-
-
-  There are some parameters to help us to use these command easily.
+  There are some options to help us to use the SCP command effectively.
 
 
   Let’s review some parameters of SCP command.
 
 
-  .
+  * \-P(Capital P) - Specifies the remote host ssh port.
+
+  * \-p - Preserves files modification and access times, and modes from the
+  original files.
+
+  * \-q - Use this option if you want to suppress the progress meter and
+  non-error messages.
+
+  * \-C - This option forces the SCP to compresses the data as it is sent to the
+  destination machine.
+
+  * \-r - This option allows the SCP to copy all files and directories of the
+  host address.
 
 
-  .
-
-
-  .
+  ## Example of using SCP
 
 
 
 
   Sometimes you the files you want to copy from are not at the same folder or
-  directory, so we need to repeat SCP command for different locations
+  directory, so we need to repeat SCP command for different locations, instead
+  of repeating the SCP command we can creat a bash file
 ---
 

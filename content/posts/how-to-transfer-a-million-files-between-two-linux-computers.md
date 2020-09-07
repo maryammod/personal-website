@@ -69,6 +69,8 @@ content: >-
   * **\[user@]DEST_HOST:]file2**: the location of the destination file or
   directory should mention here.
 
+  * **The colon (:)**: shows the difference between local and remote locations.
+
 
   Sometimes the address of host files is not as simple and clear as we expect
   so, in this case, using "[tree"
@@ -112,10 +114,51 @@ content: >-
   ## Example of using SCP
 
 
+  1. Copy file from a Linux server to a local computer or vice versa.
+     ```
+     scp username@remote:/file/to/send /where/to/put/local-machine
+     ```
+  2. Copy file between two remote hosts.
+     ```
+     scp username@remote_1:/file/to/send username@remote_2:/where/to/put
+     ```
+  3. Using -r option to copy all file and directory of the host address.
+     ```
+     scp -r username@remote_host:/file/to/send username@remote_des:/where
+     ```
+
+  Sometimes, the files you want to copy from the host are not at the same folder
+  or directory, so we need to repeat SCP command for different locations,
+  instead of repeating the SCP command we can _**make a bash file**_ containing
+  the several SCP commands for the different host address.
 
 
-  Sometimes you the files you want to copy from are not at the same folder or
-  directory, so we need to repeat SCP command for different locations, instead
-  of repeating the SCP command we can creat a bash file
+  ## SCP and authentication
+
+
+  The SCP command works on ssh to transfer data, so it requires an ssh key or
+  password to authenticate on the remote systems.
+
+
+  For transferring files, it reads permissions on the source file and copies
+  permission on the target machine.
+
+
+  It is interesting to know that SCP will **overwrite files** (if the name of
+  files for the host and destination was the same) without any warning.
+
+
+  You may also want to set up an **SSH key-based authentication** and connect to
+  your Linux servers without entering a password. Please review **this post** to
+  learn a method to get rid of typing your passwords while multiple SCP commands
+  are running. 
+
+
+  ## Conclusion
+
+
+  In this post, you learned how to use the SCP Linux command to copy files and
+  directories from the host machine to destination machine. we revied some
+  important parameters of the SCP command to make using it more effectively.
 ---
 

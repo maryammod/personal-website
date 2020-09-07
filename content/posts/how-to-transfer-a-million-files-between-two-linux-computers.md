@@ -5,7 +5,7 @@ description: >-
   computer fast and efficiently
 date: 2020-09-07T19:25:58.352Z
 published: true
-cover_image: /images/uploads/template-1-.jpg
+cover_image: /images/uploads/template-2-.jpg
 tags:
   - Machine Learning
 content: >-

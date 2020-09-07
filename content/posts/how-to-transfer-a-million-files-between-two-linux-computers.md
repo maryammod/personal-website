@@ -1,8 +1,8 @@
 ---
 title: How to transfer files between two Linux computers
 description: >-
-  My goal is transferring a million images from a linux server to my local Linux
-  computer fast and efficiently.
+  The goal of this post is transferring a million images from a linux server to
+  the local Linux computer fast and efficiently.
 date: 2020-09-07T19:25:58.352Z
 published: true
 cover_image: /images/uploads/template-2-.jpg
@@ -66,7 +66,8 @@ content: >-
   * **\[user@]DEST_HOST:]file2**: the location of the destination file or
   directory should mention here.
 
-  * **The colon (:)**: shows the difference between local and remote locations.
+  * **The colon (:)**: to distinguish between SSH or IP address and the location
+  of files.
 
 
   Sometimes the address of host files is not as simple and clear as we expect
@@ -126,7 +127,7 @@ content: >-
 
   Sometimes, the files you want to copy from the host are not at the same folder
   or directory, so we need to repeat SCP command for different locations,
-  instead of repeating the SCP command we can _**make a bash file**_ containing
+  instead of repeating the SCP command we can **_make a bash file_** containing
   the several SCP commands for the different host address.
 
 

@@ -5,24 +5,21 @@ description: >-
   computer fast and efficiently
 date: 2020-09-07T19:25:58.352Z
 published: true
-cover_image: false
+cover_image: /images/uploads/template-1-.jpg
 tags:
   - Machine Learning
 content: >-
-  My goal is transferring a million images from a linux server to my local
-  computer. It is pretty usual that when you want to run your Machine Learning
-  project, you need to download or transferr the dataset form somewhere to your
-  local machine or any machine you want to run your project.
+  It is pretty usual that when you want to run your Machine Learning project,
+  you need to download or transfer the dataset form somewhere to your local
+  machine or any machine you want to run your project.
 
 
-  So I believe it is so important to learn how we can copy a big dataset from
+  So, it would be so important to learn how we can copy a big dataset from
   another computer to our local computer on Linux.
 
 
-  One of the simplest ways to transfer files on Linux is using "SCP" command.
-
-
-  So, lets get more into it:
+  One of the simplest ways to transfer files on Linux is using the "SCP"
+  command. So, let's get more into it:
 
 
   ## SCP, Secure Copy Linux Command

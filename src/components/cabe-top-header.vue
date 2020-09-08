@@ -10,7 +10,7 @@
 					<nav id="main-menu">
 						<ul>
 							<li><g-link class="nav__link" to="/">Home</g-link></li>
-							<li><g-link class="nav__link" to="/about">About</g-link></li>
+							<li><g-link class="nav__link" to="/about">About Me</g-link></li>
 							<li><g-link class="nav__link" to="/contact">Contact</g-link></li>
 						</ul>
 					</nav>

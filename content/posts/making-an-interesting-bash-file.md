@@ -47,16 +47,18 @@ content: >-
   this case instead of typing these following command 
 
 
+  ```bash
+
+  scp username@remote_host:/file1/to/send .
+
+  scp username@remote_host:/file2/to/send .
+
+  scp username@remote_host:/file3/to/send .
+  
   ```
 
-  scp  username@remote_host:/file1/to/send .scp 
-  username@remote_host:/file2/to/send .scp  username@remote_host:/file3/to/send
-  .
 
-  ```
-
-
-  we can just put all that repatative and annoying commands with different
+  we can just put all that repetitive and annoying commands with different
   addresses into a script and we just need to run it, like :
 
 
@@ -80,16 +82,16 @@ content: >-
 
 
   1. Using "nano" command to create and edit the script file.
-     1. ```
-        nano example.sh
-        ```
+    ```
+      nano example.sh
+    ```
   2. Making a file as an executable file
-     1. adding the **shebang (#!)** at the top of the script. In Linux systems, a text file with a shebang is interpreted as an executable file. You can confirm where the bash interpreter is located with **which bash**.
+     adding the **shebang (#!)** at the top of the script. In Linux systems, a text file with a shebang is interpreted as an executable file. You can confirm where the bash interpreter is located with **which bash**.
   3. Adding the output of Which command on top of the file
-     1. For example, the output of which is "#!bin/bash ", we should add it to the top of the example file
-     2. ```
-        #!bin/bash
-        ```
+     For example, the output of which is `#!bin/bash`, we should add it to the top of the example file
+     ```
+      #!bin/bash
+     ```
 
   It is convention to give files that are Bash scripts an extension of .sh
   (myscript.sh for example). As you would be aware (and if you're not maybe you
@@ -106,9 +108,9 @@ content: >-
 
   So, we just run this on the console.
 
-
-  ./yourbashfilename.bash
-
+  ```
+    ./yourbashfilename.bash
+  ```
 
   A good question arises, how we can make a bash file on Linux. 
 
@@ -122,7 +124,7 @@ content: >-
   H2- Conclusion
 
 
-  Refrences: 
+  References: 
 
 
   https://ryanstutorials.net/bash-scripting-tutorial/bash-script.php

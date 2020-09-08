@@ -3,18 +3,16 @@
 
 import DefaultLayout from '~/layouts/Default.vue'
 
-// bootstrap js
-
 // bootstrap css
 import "bootstrap/dist/css/bootstrap.css";
 
 // theme style css
 import '~/assets/css/style.css';
 
-// import 'owl.carousel/dist/assets/owl.carousel.css';
-// import 'owl.carousel';
-
-// import '~/assets/js/main.js'
+// prism
+import VuePrism from 'vue-prism'
+import 'prismjs/themes/prism.css'
+import '~/assets/css/prism-nord.css'
 
 // import disqus
 import VueDisqus from 'vue-disqus'
@@ -32,7 +30,9 @@ export default function (Vue, { router, head, isClient }) {
   })
 
   Vue.use(VueDisqus)
-  
+
+  Vue.use(VuePrism)
+
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
 }

@@ -7,11 +7,14 @@ published: true
 cover_image: false
 tags:
   - Machine Learning
+  - Linux
+  - Bash-Scripts
+  - SCP
 content: >-
-  I mentioned the word of "interesting" for making bash files because It’s the
-  most efficient shell scripting language. It gives you the easiest way to
-  automate things. If you want to work on linux systems then you should know how
-  the shell works. In this post, I am just trying to explain what is a bash
+  I mentioned the word "interesting" for making bash files because It’s the most
+  efficient shell scripting language. It gives you the easiest way to automate
+  things. If you want to work on Linux systems then you should know how the
+  shell works. In this post, I am just trying to explain shortly what is a bash
   script and how we can create a bash file.
 
 
@@ -38,11 +41,11 @@ content: >-
 
   ```shell
 
-  scp username@remote_host:/file1/to/send .
+  $ scp username@remote_host:/file1/to/send .
 
-  scp username@remote_host:/file2/to/send .
+  $ scp username@remote_host:/file2/to/send .
 
-  scp username@remote_host:/file3/to/send .
+  $ scp username@remote_host:/file3/to/send .
 
   ```
 
@@ -52,7 +55,7 @@ content: >-
 
   ```
 
-  ./yourbashfilename.sh
+  $ ./yourbashfilename.sh
 
   ```
 
@@ -73,47 +76,49 @@ content: >-
 
 
   ```
-    nano example.sh
+   $ nano example.sh
   ```
 
 
+  It is common to give files that are Bash scripts an extension of .sh (example.sh for example). Linux is an extensionless system so a script doesn't necessarily work without extensions.
+
+
   2. Making a file as an executable file
-     adding the **shebang (#!)** at the top of the script. In Linux systems, a text file with a shebang is interpreted as an executable file. You can confirm where the bash interpreter is located with **which bash**.
+     adding the **shebang (#!)** at the top of the script. In Linux systems, a text file with a shebang is interpreted as an executable file. You can confirm where the bash interpreter is located with **which** command.
   3. Adding the output of Which command on top of the file
      For example, the output of which is `#!bin/bash`, we should add it to the top of the example file
 
      ```
       #!bin/bash
      ```
+  4. It is time to make an amazing bash file including several SCP commands 
 
-  It is convention to give files that are Bash scripts an extension of .sh (myscript.sh for example). As you would be aware (and if you're not maybe you should consider reviewing our Linux Tutorial), Linux is an extensionless system so a script doesn't necessarily have to have this characteristic in order to work.
+     ```
+      #!bin/bash
+      scp username@remote_host:/file1/to/send .
+      scp username@remote_host:/file2/to/send .
+      scp username@remote_host:/file3/to/send .
+     ```
+  5. Press ctrl+x to save the file, so example.sh is already build.
+
+  6. To make example.sh executable as we expect to run it like ./example.sh, we should make it executable.
+
+     ```
+     $ chmod +x example.sh
+     ```
+  7. Now, you can run example.sh directly.
+
+     ```
+     $ ./example.sh
+     ```
+
+  ## Conclusion
 
 
-  most of time we need to run a repetitive several command lines for doing a specific job, for instance: instead of writing these 3 command lines for copying files from different host locations, we can just run a bash file containing that commands.
-
-
-  So, we just run this on the console.
-
-
-  ```shell
-    ./yourbashfilename.bash
-  ```
-
-
-  A good question arises, how we can make a bash file on Linux. 
-
-
-  H2- bash file
-
-
-  H2- Example of a bash file
-
-
-  H2- Conclusion
+  I hope this post has been helpful and practical for you to get started with bash scripting in Linux. The concept of having a script that has complete access to anything on a Linux computer was initially a complicated thought for me, but once I got familiar to it I found it SO useful and efficient.
 
 
   References: 
-
 
   https://ryanstutorials.net/bash-scripting-tutorial/bash-script.php
 ---

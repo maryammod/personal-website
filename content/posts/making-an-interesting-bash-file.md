@@ -91,8 +91,6 @@ content: >-
         #!bin/bash
         ```
 
-
-
   It is convention to give files that are Bash scripts an extension of .sh
   (myscript.sh for example). As you would be aware (and if you're not maybe you
   should consider reviewing our Linux Tutorial), Linux is an extensionless
@@ -106,48 +104,22 @@ content: >-
   containing that commands.
 
 
-
-
   So, we just run this on the console.
-
-
 
 
   ./yourbashfilename.bash
 
 
-
-
-
-
-
-
   A good question arises, how we can make a bash file on Linux. 
-
-
 
 
   H2- bash file
 
 
-
-
-
-
-
-
   H2- Example of a bash file
 
 
-
-
-
-
-
-
   H2- Conclusion
-
-
 
 
   Refrences: 

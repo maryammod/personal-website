@@ -42,8 +42,6 @@ content: >-
   ```
 
 
-
-
   If you can see the version of Rsync on your Linux machine (Ubuntu), it means Rsync is already installed.
 
 
@@ -57,10 +55,10 @@ content: >-
   ```
 
 
-  ## Basic Syntax
+  ## Basic Rsync Syntax
 
 
-  The basic syntax for Rsync works as follow:
+  The basic syntax for Rsync works simply as follow:
 
 
   ```
@@ -70,31 +68,24 @@ content: >-
   ```
 
 
-  There are a couple of different ways you can use Linux rsync. In this example, **\[optional modifiers]** indicate the actions to be taken, **\[SRC]** is the source directory, and **\[DEST]** is the destination directory or machine.
+  * **\[optional modifiers]** indicate the actions to be taken
+
+  *  **\[SRC]** is the source directory
+
+  *  **\[DEST]** is the destination directory
+
+
 
 
   ### Basic Syntax for Remote Shell
 
 
-  When using a remote shell, such as SSH or RSH, the rsync syntax will be slightly different.
-
-
-  To access the remote shell (**PULL**) use the rsync command:
+  The Rsync syntax for using a remote shell will be slightly different.
 
 
   ```
 
-  rsync [optional modifiers] [USER@]HOST:SRC [DEST]
-
-  ```
-
-
-  To access the remote shell (**PUSH**) use the rsync command:
-
-
-  ```
-
-  rsync [optional modifiers] SRC [USER@]HOST:[DEST]
+  rsync [optional modifiers] [USER@]HOST:SRC[DEST] [DEST]
 
   ```
 
@@ -104,59 +95,88 @@ content: >-
   ## Rsync options:
 
 
-  Some of the commonly used options in rsync command are listed below:
+  Some of the commonly important used options in rsync command are listed below:
 
 
-  * \-v, –verbose Verbose output
+  * **\-v**, –Verbose output
 
-  * \-q, –quiet suppress message output
+  * **\-q**, –quiet suppress message output
 
-  * \-a, –archive archive files and directory while synchronizing ( -a equal to following options -rlptgoD)
+  * **\-a**, –archive files and directory while synchronizing
 
-  * \-r, –recursive sync files and directories recursively
+  * **\-r**, –recursive sync files and directories recursively
 
-  * \-b, –backup take the backup during synchronization
+  * **\-b**, –backup take the backup during synchronization
 
-  * \-u, –update don’t copy the files from source to destination if destination files are newer
+  * **\-u**, –update don’t copy the files from source to destination if destination files are newer
 
-  * \-l, –links copy symlinks as symlinks during the sync
+  * **\-l**, –links copy symlinks as symlinks during the sync
 
-  * \-n, –dry-run perform a trial run without synchronization
+  * **\-n**, –dry-run perform a trial run without synchronization
 
-  * \-e, –rsh=COMMAND mention the remote shell to use in rsync
+  * **\-e**, –rsh=COMMAND mention the remote shell to use in rsync
 
-  * \-z, –compress compress file data during the transfer
+  * **\-z**, –compress file data during the transfer
 
-  * \-h, –human-readable display the output numbers in a human-readable format
+  * **\-h**, –human-readable display the output numbers in a human-readable format
 
-  * –progress show the sync progress during transfer
+  * **–progress**, -show the sync progress during transferring
 
 
-  Let’s jump into the useful examples of rsync command
+  To read more about Rsync options, take a look at https://linux.die.net/man/1/rsync
+
+
+  Let’s jump into the useful and amazing examples of Rsync command.
 
 
   ## Rsync Example
 
 
-  1. #### Copy files & directories recursively locally (rsync -zrvh or rsync -zavh)
+  1. #### Copy files & directories recursively locally 
 
-     Let’s assume we have multiple files and directories inside pkumar user home directory, use below rsync command to copy files and directories recursively, either use -a or -r option to copy files and directories recursively.
 
-     **Note** : In rsync command **\-a** option is used for archiving during the copy or sync and apart from archiving -a option is also used for followings:
+  Sometimes you need to transfer all files and directories of one directory, the option of -r is the best Rsync options for you, we call it, "recursively".
 
-     * recursively copy files and directory
-     * copy symlinks as symlinks
-     * preserve permissions
-     * preserve group
-     * preserve modification time
-     * preserve ownership
+  **either use -a or -r option to copy files and directories recursively.**
 
-     ```
-     [root@gateway ~]# rsync -zrvh /home/pkumar /opt/backup
-     or
-     [root@gateway ~]# rsync -zavh /home/pkumar /opt/backup
-     ```
-  2. #### Copy or Sync files and directories from remote machine to local system
+  In rsync command **\-a** option is used for archiving during the copy or sync and apart from archiving -a option is also used for followings:
+
+  * recursively copy files and directory
+
+  * copy symlinks as symlinks
+
+  * preserve permissions
+
+  * preserve group
+
+  * preserve modification time
+
+  * preserve ownership
+
+
+  Assume we need to copy all files in "singles" directory at Digits remote Linux computer to the current folder at the destination.
+
+  ```
+
+  [root@gateway ~]# rsync -zrvh /home/singles .
+
+  or
+
+  [root@gateway ~]# rsync -zavh /home/singles .
+
+  ```
+
+  Let's look at the options:
+
+
+  * **\-z**, –compress file data during the transfer
+
+  * **\-v**, –Verbose output
+
+  * **\-h**, –display the output numbers
+
+
+  1. #### Copy or Sync files and directories from remote machine to local system
 
      Let’s suppose we want to copy files and directories from remote machine(192.168.1.29) to our local system, in the below example I am copying remote folder **“/opt/rpms_db**” in my local machine under **/tmp** folder
 
@@ -217,7 +237,7 @@ content: >-
      total size is 16.37M  speedup is 1.00
      [root@gateway ~]#
      ```
-  3. #### Example:9) Resume large file transfer after getting failed in scp
+  2. #### Example:9) Resume large file transfer after getting failed in scp
 
      There are some scenarios in linux admin profile where we have started copying a larger file using scp command, but it got terminated in the middle and we can’t afford to start copying it again using scp because of its large size and time consumption.
 

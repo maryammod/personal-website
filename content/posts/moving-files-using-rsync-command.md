@@ -125,10 +125,12 @@ content: >-
   Let’s jump into the useful and amazing examples of Rsync command.
 
 
-  ## Rsync Example
+  ## Rsync Examples
 
 
-  1. #### Copy files & directories recursively
+
+
+  #### 1. Copy files & directories recursively
 
 
   Sometimes you need to transfer all files and directories of one directory, the option of -r is the best Rsync options for you, we call it, "recursively".
@@ -175,7 +177,7 @@ content: >-
   * **\-h**, –display the output numbers
 
 
-  2. #### Display Synchronization progress in Rsync command output
+  #### 2. Display Synchronization progress in Rsync command output
 
 
   If you want to see the sync or copy progress in rsync command then use “**–progress**“
@@ -209,7 +211,7 @@ content: >-
   ```
 
 
-  2. #### Resume large file transfer after getting failed in SCP
+  #### 3. Resume large file transfer after getting failed in SCP
 
 
   There are some scenarios in Linux admin profile where we have started copying a larger file using scp command, but it got terminated in the middle and we can’t afford to start copying it again using scp because of its large size and time consumption.
@@ -259,18 +261,19 @@ content: >-
   Here you go, you can simply transfer your files and make sure all directories are synced and the transferring job is already done quite well.
 
 
-  3. ### Put a limit on file transfer size (–max-size)
+  ### 4. Put a limit on file transfer size (–max-size)
 
 
   If you don’t want to transfer or copy the large files (for example, you don't want to transfer files more than 2MB), then use the option ‘–**max-size={specify-size-here}’.** In our example we should write ‘–max-size=2M’.
 
      **Note: To specify the size in MB use M and for GB use G.**
 
-     ```
+  ```
 
-     [root@gateway ~]# rsync -P --max-size='2M' maryam@digits.uwinnipeg.ca:/root/singles /plant_images
+  [root@gateway ~]# rsync -P --max-size='2M' maryam@digits.uwinnipeg.ca:/root/singles /plant_images
 
-     ```
+  ```
+
 
   ## Conclusion
 

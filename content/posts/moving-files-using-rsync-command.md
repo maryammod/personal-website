@@ -132,7 +132,7 @@ content: >-
   ## Rsync Example
 
 
-  1. #### Copy files & directories recursively locally 
+  1. #### Copy files & directories recursively  
 
 
   Sometimes you need to transfer all files and directories of one directory, the option of -r is the best Rsync options for you, we call it, "recursively".
@@ -158,11 +158,11 @@ content: >-
 
   ```
 
-  [root@gateway ~]# rsync -zrvh /home/singles .
+  [root@gateway ~]# rsync -zrvh maryam@digits.uwinnipeg.ca:/home/singles .
 
   or
 
-  [root@gateway ~]# rsync -zavh /home/singles .
+  [root@gateway ~]# rsync -zavh maryam@digits.uwinnipeg.ca:/home/singles .
 
   ```
 
@@ -176,40 +176,13 @@ content: >-
   * **\-h**, –display the output numbers
 
 
-  1. #### Copy or Sync files and directories from remote machine to local system
+  2. #### Display Synchronization progress in Rsync command output
 
-     Let’s suppose we want to copy files and directories from remote machine(192.168.1.29) to our local system, in the below example I am copying remote folder **“/opt/rpms_db**” in my local machine under **/tmp** folder
 
-     ```
-     [root@gateway ~]# rsync -zarvh root@192.168.1.29:/opt/rpms_db /tmp
-     root@192.168.1.29's password:
-     receiving incremental file list
-     ……………………………………………………………
-     rpms_db/
-     rpms_db/httpd-2.4.6-88.el7.centos.x86_64.rpm
-     rpms_db/httpd-tools-2.4.6-88.el7.centos.x86_64.rpm
-     rpms_db/postfix-2.10.1-7.el7.x86_64.rpm
-     rpms_db/pytalloc-2.1.13-1.el7.x86_64.rpm
-     rpms_db/samba-4.8.3-4.el7.x86_64.rpm
-     rpms_db/samba-client-libs-4.8.3-4.el7.x86_64.rpm
-     rpms_db/samba-common-4.8.3-4.el7.noarch.rpm
-     rpms_db/samba-common-libs-4.8.3-4.el7.x86_64.rpm
-     rpms_db/samba-common-tools-4.8.3-4.el7.x86_64.rpm
-     rpms_db/samba-libs-4.8.3-4.el7.x86_64.rpm
-
-     sent 484 bytes  received 15.45M bytes  1.07M bytes/sec
-     total size is 16.37M  speedup is 1.06
-     [root@gateway ~]#
-     ```
-
-     Above command will automatically create a folder “rpms_db” under the /tmp folder in our local machine.
-
-     #### Example:7) Display Synchronization progress in rsync command output
-
-     If you want to see the sync or copy progress in rsync command then use “**–progress**“, example is shown below
+  If you want to see the sync or copy progress in rsync command then use “**–progress**“
 
      ```
-     [root@gateway ~]# rsync -avh --progress root@192.168.1.29:/opt/rpms_db /tmp
+     [root@gateway ~]# rsync -avh --progress maryam@digits.uwinnipeg.ca:/home/singles /tmp
      root@192.168.1.29's password:
      receiving incremental file list
      ……………………………………………………………………………………………………..
@@ -220,35 +193,57 @@ content: >-
               92.50K 100%    1.13MB/s    0:00:00 (xfr#7, to-chk=17/25)
      rpms_db/postfix-2.10.1-7.el7.x86_64.rpm
                2.56M 100%   14.44MB/s    0:00:00 (xfr#17, to-chk=7/25)
-     rpms_db/samba-4.8.3-4.el7.x86_64.rpm
-             696.47K 100%    3.71MB/s    0:00:00 (xfr#19, to-chk=5/25)
-     rpms_db/samba-client-libs-4.8.3-4.el7.x86_64.rpm
-               5.07M 100%   19.90MB/s    0:00:00 (xfr#20, to-chk=4/25)
-     rpms_db/samba-common-4.8.3-4.el7.noarch.rpm
-             210.98K 100%  844.42kB/s    0:00:00 (xfr#21, to-chk=3/25)
-     rpms_db/samba-common-libs-4.8.3-4.el7.x86_64.rpm
-             167.51K 100%  667.70kB/s    0:00:00 (xfr#22, to-chk=2/25)
-     rpms_db/samba-common-tools-4.8.3-4.el7.x86_64.rpm
-             458.38K 100%    1.77MB/s    0:00:00 (xfr#23, to-chk=1/25)
-     rpms_db/samba-libs-4.8.3-4.el7.x86_64.rpm
-             282.33K 100%    1.09MB/s    0:00:00 (xfr#24, to-chk=0/25)
 
      sent 484 bytes  received 16.38M bytes  3.64M bytes/sec
      total size is 16.37M  speedup is 1.00
-     [root@gateway ~]#
+     [maryam@digits ~]#
      ```
-  2. #### Example:9) Resume large file transfer after getting failed in scp
+  2. #### Resume large file transfer after getting failed in SCP
 
      There are some scenarios in linux admin profile where we have started copying a larger file using scp command, but it got terminated in the middle and we can’t afford to start copying it again using scp because of its large size and time consumption.
 
-     So in this situation rsync command can used as it can start copying the file from where it left off or terminated, or in other words rsync can transfer the files which are partially copied using scp command. Example is shown below,
+     So in this situation rsync command can used as it can start copying the file from where it left off or terminated, or 
+  *Note: After a failur experience of using SCP, Rsync can continue the coping accurately and even faster.*
 
-     ```
+  in other words rsync can synchronized the files and transfer the files which are partially copied using scp command
 
-     ```
 
-     \
-     Example:11) Put limit on file transfer size (–max-size)
+  ```
+
+  [maryam@digits ~]# scp maryam@digits.uwinnipeg.ca:/root/singles /plant_images
+
+  .
+
+  Canola2021.jpg   100% 97MB 00:00
+
+  Canola2020.jpg   100% 67MB 00:00
+
+  $ connection reset by 192.168.1.29 port 22
+
+  ```
+
+  *connection reset* is a funny error made me finding *rsync* command to transfer the files which are partially copied using SCP command.
+
+
+  ```
+
+  [root@gateway ~]# rsync -P --rsh=ssh maryam@digits.uwinnipeg.ca:/root/singles /plant_images
+
+
+  Canola2021.jpg   100% 97MB 00:00
+
+  Canola2020.jpg   100% 67MB 00:00
+
+  Canola20211.jpg  100% 70MB 00:00
+
+  Canola20201.jpg  100% 60MB 00:00
+    1,921,843,200 100%   18.47MB/s    0:01:39 (xfr#1, to-chk=0/1)
+  [root@gateway ~]#
+   ```
+  Here you go, you can simply transfer your files and make sure all directories are synced and the transferring job is already done quite well.
+
+
+  3. ### Put a limit on file transfer size (–max-size)
 
      If you don’t want to transfer or copy the large files using rsync then use the option ‘–**max-size={specify-size-here}’**, let’s assume we don’t we don’t want to transfer the files whose size is more than 500K,
 

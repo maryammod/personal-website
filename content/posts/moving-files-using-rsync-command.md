@@ -2,8 +2,8 @@
 title: Moving files using Rsync command
 description: Rsync is a fast and extraordinarily Linux command using transferring files.
 date: 2020-09-08T18:08:17.040Z
-published: false
-cover_image: false
+published: true
+cover_image: /images/uploads/rsync-maryam-bafandkar.jpg
 tags:
   - Linux
 content: >-

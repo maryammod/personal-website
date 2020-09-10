@@ -34,10 +34,7 @@ content: >-
 
   Rsync installed with many Linux distributions but to check whether Rsync is installed on your machine or not, execute the following command:
 
-
-  ```
-
-  rsync -version
+  ```rsync -version
 
   ```
 
@@ -47,10 +44,8 @@ content: >-
 
   Otherwise, you need to install it manually in just a minute by using this simple following command:
 
+  ```apt-get install rsync
 
-  ```
-
-  apt-get install rsync
 
   ```
 

@@ -4,7 +4,7 @@ description: 'I mentioned the word of "interesting" for making bash files
   because It’s the most efficient shell scripting language. '
 date: 2020-09-07T19:25:58.352Z
 published: true
-cover_image: false
+cover_image: /images/uploads/linux-bash-maryam-bafandkar.jpg
 tags:
   - Machine Learning
   - Linux

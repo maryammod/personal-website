@@ -128,7 +128,7 @@ content: >-
   ## Rsync Examples
 
 
-  #### 1. Copy files & directories recursively
+  #### Example-1) Copy files & directories recursively
 
 
   Sometimes you need to transfer all files and directories of one directory, the option of -r is the best Rsync options for you, we call it, "recursively".
@@ -165,7 +165,7 @@ content: >-
   ```
 
 
-  Let's look at the options:
+  Let's look at the options used:
 
 
   * **\-z**, –compress file data during the transfer
@@ -175,7 +175,7 @@ content: >-
   * **\-h**, –display the output numbers
 
 
-  #### 2. Display Synchronization progress in Rsync command output
+  #### Example-2) Display Synchronization progress in Rsync command output
 
 
   If you want to see the sync or copy progress in rsync command then use “**–progress**“
@@ -209,15 +209,15 @@ content: >-
   ```
 
 
-  #### 3. Resume large file transfer after getting failed in SCP
+  #### Example-3) Resume large file transfer after getting failed in SCP
 
 
   There are some scenarios in Linux admin profile where we have started copying a larger file using scp command, but it got terminated in the middle and we can’t afford to start copying it again using scp because of its large size and time consumption.
 
 
-  So in this situation rsync command can used as it can start copying the file from where it left off or terminated, or 
-     *Note: After a failur experience of using SCP, Rsync can continue the coping accurately and even faster.*
-  in other words rsync can synchronized the files and transfer the files which are partially copied using scp command
+  So in this situation,rsync command can used as it can start copying the file from where it left off or terminated, or 
+     *Note: After a failure experience of using SCP, Rsync can continue the coping accurately and even faster.*
+  in other words, rsync can synchronize the files and transfer the files which are partially copied using scp command.
 
 
   ```
@@ -235,7 +235,7 @@ content: >-
   ```
 
 
-  ***connection reset* is a funny error made me finding the *rsync* command to transfer the files which are partially copied using SCP command.**
+  **"connection reset"** is a funny error made me finding the ***rsync*** command to transfer the files which are partially copied using SCP command.
 
 
   ```
@@ -259,10 +259,10 @@ content: >-
   Here you go, you can simply transfer your files and make sure all directories are synced and the transferring job is already done quite well.
 
 
-  ### 4. Put a limit on file transfer size (–max-size)
+  ### Example-4)Put a limit on file transfer size (–max-size)
 
 
-  If you don’t want to transfer or copy the large files (for example, you don't want to transfer files more than 2MB), then use the option ‘–**max-size={specify-size-here}’.** In our example we should write ‘–max-size=2M’.
+  If you don’t want to transfer or copy the large files (for example, you don't want to transfer files more than 2MB), then use the option ‘–**max-size={specify-size-here}’.** In our example, we should write ‘–max-size=2M’.
 
      **Note: To specify the size in MB use M and for GB use G.**
 
@@ -271,6 +271,7 @@ content: >-
   [root@gateway ~]# rsync -P --max-size='2M' maryam@digits.uwinnipeg.ca:/root/singles /plant_images
 
   ```
+
 
 
   ## Conclusion

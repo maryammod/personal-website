@@ -29,7 +29,7 @@ content: >-
   * support for anonymous or authenticated Rsync daemons (ideal for mirroring)
 
 
-  ## Install Rsync
+  ### Install Rsync
 
 
   Rsync installed with many Linux distributions but to check whether Rsync is installed on your machine or not, execute the following command:
@@ -55,7 +55,7 @@ content: >-
   ```
 
 
-  ## Basic Rsync Syntax
+  ### Basic Rsync Syntax
 
 
   The basic syntax for Rsync works simply as follow:
@@ -88,7 +88,7 @@ content: >-
   ```
 
 
-  ## Rsync options:
+  ### Rsync options:
 
 
   Some of the commonly important used options in rsync command are listed below:
@@ -259,7 +259,7 @@ content: >-
   Here you go, you can simply transfer your files and make sure all directories are synced and the transferring job is already done quite well.
 
 
-  ### Example-4)Put a limit on file transfer size (–max-size)
+  #### Example-4)Put a limit on file transfer size (–max-size)
 
 
   If you don’t want to transfer or copy the large files (for example, you don't want to transfer files more than 2MB), then use the option ‘–**max-size={specify-size-here}’.** In our example, we should write ‘–max-size=2M’.
@@ -273,8 +273,7 @@ content: >-
   ```
 
 
-
-  ## Conclusion
+  ### Conclusion
 
 
   In this post, I was trying to explain Rsync Linux command simply and practically. It was short but completely practical if you have to transfer a huge number of images from a remote Linux system, like me, and face some unexpected errors like "connection reset" or some errors like it. I hope you found it useful additionally, I hope this post can make you happy when you can move many files in a short time without any error or interruptions.

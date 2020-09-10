@@ -1,10 +1,10 @@
 ---
-title: Files transfer using scp problems & rsync commands
+title: Get ride of SCP problems by rsync command
 description: We are transferring a huge number of files from a remote Linux
   machine to our local Linux system.
 date: 2020-09-08T15:23:03.089Z
-published: false
-cover_image: false
+published: true
+cover_image: /images/uploads/scp-errors.jpg
 tags:
   - Linux
   - SCP

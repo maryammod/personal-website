@@ -9,13 +9,16 @@ tags:
 content: >-
   Rsync (Remote Sync) is a most commonly used command for copying and
   synchronizing files and directories remotely as well as locally in Linux
-  systems. It efficiently copies and sync files to or from a remote system.
+  systems. It efficiently copies and synchornizes files from the host machine to
+  destination one.
 
 
   It’s faster than [SCP](https://maryambafandkar.me/files-transfer-using-scp-problems-and-rsync-commands) (Secure Copy) because Rsync uses the remote-update protocol, take a snapshot and enable to compress files before transferring. At the first step, it copies the whole content of a file or a directory from source to destination and then, it copies only the changed blocks and bytes to the destination.
 
 
-  ##### Some of the *interesting features* of Rsync are:
+
+
+  ## Some of the *interesting features* of Rsync are:
 
 
   * Supports all permissions of links, devices, owners and groups.
@@ -29,7 +32,9 @@ content: >-
   * support for anonymous or authenticated Rsync daemons (ideal for mirroring)
 
 
-  ### Install Rsync
+
+
+  ## Install Rsync
 
 
   Rsync installed with many Linux distributions but to check whether Rsync is installed on your machine or not, execute the following command:
@@ -55,7 +60,7 @@ content: >-
   ```
 
 
-  ### Basic Rsync Syntax
+  ## Basic Rsync Syntax
 
 
   The basic syntax for Rsync works simply as follow:
@@ -75,7 +80,9 @@ content: >-
   * **\[DEST]** is the destination directory
 
 
-  ### Basic Syntax for Remote Shell
+
+
+  ## Basic Syntax for Remote Shell
 
 
   The Rsync syntax for using a remote shell will be slightly different.
@@ -125,10 +132,14 @@ content: >-
   Let’s jump into the useful and amazing examples of Rsync command.
 
 
-  ## Rsync Examples
 
 
-  #### Example-1) Copy files & directories recursively
+  ## Rsync Practical Examples
+
+
+  ### Example-1) Copy files & directories recursively
+
+
 
 
   Sometimes you need to transfer all files and directories of one directory, the option of -r is the best Rsync options for you, we call it, "recursively".
@@ -175,7 +186,11 @@ content: >-
   * **\-h**, –display the output numbers
 
 
-  #### Example-2) Display Synchronization progress in Rsync command output
+
+
+  ### Example-2) Display Synchronization progress in Rsync command output
+
+
 
 
   If you want to see the sync or copy progress in rsync command then use “**–progress**“
@@ -209,7 +224,9 @@ content: >-
   ```
 
 
-  #### Example-3) Resume large file transfer after getting failed in SCP
+  ### Example-3) Resume large file transfer after getting failed in SCP
+
+
 
 
   There are some scenarios in Linux admin profile where we have started copying a larger file using scp command, but it got terminated in the middle and we can’t afford to start copying it again using scp because of its large size and time consumption.
@@ -259,7 +276,11 @@ content: >-
   Here you go, you can simply transfer your files and make sure all directories are synced and the transferring job is already done quite well.
 
 
-  #### Example-4)Put a limit on file transfer size (–max-size)
+
+
+  ### Example-4)Put a limit on file transfer size (–max-size)
+
+
 
 
   If you don’t want to transfer or copy the large files (for example, you don't want to transfer files more than 2MB), then use the option ‘–**max-size={specify-size-here}’.** In our example, we should write ‘–max-size=2M’.

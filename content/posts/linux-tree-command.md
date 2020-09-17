@@ -1,8 +1,7 @@
 ---
 title: Linux tree command
-description: >-
-  Tree command? Machine Learning? Yes! you are asking the right question. At
-  first glance, there is no connection between Linux tree command and Machine
+description: Tree command? Machine Learning? Yes! you are asking the right
+  question. There is no connection between Linux tree command and Machine
   Learning stuff. But when you need to prepare your data to feed your network
   you must know about Linux command to download or upload the data from or to
   Linux server. Let's get into it.
@@ -13,23 +12,18 @@ tags:
   - Machine Learning
   - Plant Classification
 content: >-
-  ```
-
-  The first step to access data from a Linux server is seeing the directories
-  and find the required data you need to download and feed your network.
-
-  ```
-
-
-  # How to show the list contents of directories under Linux operating systems?
+  I know your job is implementing Machine Learning(ML) algorithms and you may
+  think, learning Linux command is irrelevant but based on my experience you
+  should know all ins-and-outs of an ML project, including understanding,
+  organizing and preparing data before feeding the data into your ML network.
+  So, I am writting several posts about Linux commands that can be so practical
+  and helpful for data preparation as a part of doing an ML project.
 
 
-  You need to use a linux command called "tree". It will list contents of
-  directories in a tree-like format. It is a recursive directory listing program
-  that produces a depth indented listing of files. When directory arguments are
-  given, tree lists all the files and/or directories found in the given
-  directories each in turn. tree returns the total number of files and/or
-  directories listed. 
+  ## How to see the list of directories under Linux operating systems?
+
+
+  You need to use a Linux command called "tree". It will list contents of directories in a tree-like format. It is a recursive directory listing program that produces a depth indented listing of files. When directory arguments are given, tree lists all the files and/or directories found in the given directories each in turn. tree returns the total number of files and/or directories listed. 
 
 
   ## How to install "tree" on a Linux?
@@ -73,8 +67,7 @@ content: >-
   ```
 
 
-  Here is a list of all options with a short discription supported by the tree
-  program:
+  Here is a list of all options with a short description supported by the tree program:
 
 
   ```
@@ -127,11 +120,10 @@ content: >-
 
   The most intersting part of tree command for me is pattern option, "-P".
 
-  Since I just need ".jpg" files to feed my network, I can use tree command with
-  -p parameter to show me the right directories containing ".jpeg" files.
+  Since I just need ".jpg" files to feed my network, I can use tree command with -p parameter to show me the right directories containing ".jpeg" files.
 
 
-  ## Here is a simple example of using pattern option on a Linux tree command:
+  ### Here is a simple example of using pattern option on a Linux tree command:
 
 
   ```
@@ -141,11 +133,8 @@ content: >-
   ```
 
 
-  So, you can find the directories contains images you want to download from
-  them.
+  So, you can find the directories contain images you want to download from them.
 
 
-  I hope you find this post helpful as one of the beginning steps for the data
-  preparation process.
+  I hope you find this post helpful as one of the beginning steps for the data preparation process.
 ---
-

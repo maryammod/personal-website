@@ -11,6 +11,7 @@
 						<ul>
 							<li><g-link class="nav__link" to="/">Home</g-link></li>
 							<li><g-link class="nav__link" to="/about">About Me</g-link></li>
+							<li><a class="nav__link" target="_blank" rel="nofollow" href="/files/CV-maryam-bafandkar.pdf">CV</a></li>
 							<li><g-link class="nav__link" to="/contact">Contact</g-link></li>
 						</ul>
 					</nav>

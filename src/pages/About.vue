@@ -6,6 +6,7 @@
           <div class="col-sm-12 text-center">
             <div class="page-title pad-bottom-50">
               <h1><b>About Maryam</b></h1>
+              <div class="mt-4">Contact: <span>maryam.one [at] gmail (dot) com</span></div>
             </div>
           </div>
           <div class="col-sm-12 mb50">

@@ -4,7 +4,7 @@ description: "I am going to write this post to learn you how you can create a
   simple Docker file step by step. "
 date: 2021-06-23T15:07:25.521Z
 published: false
-cover_image: false
+cover_image: /images/uploads/houses.gif
 tags:
   - Machine Learning
   - Docker

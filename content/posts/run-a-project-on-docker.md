@@ -109,18 +109,25 @@ content: "Since some of my students are always struggling with working with
 
   Let's narrow it down.\ 
 
-  `--rm` is a docker option. It ?
 
-  `-i`
+  `--rm`\ 
 
-  `t`
+  `-it`
+
+  The -it runs Docker interactively (so you get a pseudo-TTY with STDIN). The
+  --rm causes Docker to automatically remove the container when it exits.
+
 
   `--volume`
 
-  `$(PWD)` it retunrs the current location
+  `$(PWD)`\ 
+
+
+  it retunrs the current location
 
   `\"$(PWD)\":\"/maryam/\"` the currnet location will be mounted to a valume
   named \"maryam\" on the container of the docker.
+
 
   `-p` It defines the available port to run the image. It's mostly used for
   web applications or using Jupitor.

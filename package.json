@@ -17,7 +17,7 @@
     "gridsome": "^0.6.0",
     "gridsome-plugin-netlify-cms": "^1.0.7",
     "jquery": "^3.4.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "netlify-cms": "^2.9.1",
     "owl.carousel": "^2.3.4",
     "popper.js": "^1.15.0",

@@ -21,7 +21,7 @@
     "netlify-cms": "^2.9.1",
     "owl.carousel": "^2.3.4",
     "popper.js": "^1.15.0",
-    "sharp": "^0.26.0",
+    "sharp": "^0.30.5",
     "vue-disqus": "^3.0.5"
   },
   "devDependencies": {
